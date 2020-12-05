@@ -1,0 +1,296 @@
+:root {
+  font-size: 60%;
+}
+
+.container {
+
+  position: relative;
+  display: block;
+  width: 90vw;
+  max-width: 900px;
+  
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 2.4rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+body {
+  background: #E5E7E9 ;
+  min-height: 500rem;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+header.header{
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgb(192, 192, 192);
+  padding: 1rem 1.2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  font-size: 2rem;
+
+  transition: top 0.5s;
+  z-index: 1;margin-bottom: 5rem;
+}
+
+div .icon-menu input[type="checkbox"] {
+  display: none;
+} 
+
+div  .icon-menu .label .menu {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  transition: 0.5s background ease-in-out;
+}
+
+
+div label .burguer {
+  position: absolute;
+  display: block;
+  background-color: black;
+  width: 30px;
+  height: 2px;
+  transition: 0.5s ease-in-out;
+  
+}
+
+
+div label .burguer::before,
+div label .burguer::after {
+  background-color: black;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 0.5s ease-in-out;
+}
+
+div label .burguer::before {
+  top: -10px;
+}
+
+div label .burguer::after {
+  bottom: -10px;
+}
+
+div .icon-menu input:checked ~label .burguer {
+  transform: rotate(45deg);
+
+}
+
+
+
+div .icon-menu input:checked ~label .burguer::before {
+  transform: rotate(90deg);
+  top: 0;
+
+}
+
+div .icon-menu input:checked ~label .burguer::after {
+  transform: rotate(90deg);
+  bottom: 0;
+
+}
+
+div .icon-menu input:checked ~label .menu {
+  background:rgb(255, 0, 0,0.8);
+
+}
+
+.profille-image {
+
+  display: block;
+  width: 50px;
+  border-radius:20px;
+}
+
+/* images */
+.profille-image {
+  display: block;
+  width: 65px;
+
+  margin-top: 2rem;
+
+  padding-left: 1rem;
+}
+
+.profille-image img {
+  width: 100%;
+  border-radius: 8rem;
+  
+}
+
+div.menu-bar nav.navigation-menu div.profille {
+  display: flex;
+  align-items: center;
+}
+
+ 
+div.menu-bar nav.navigation-menu div.profille  p::before {
+  content: '';
+  width: 11px;
+  height: 11px;
+  background:green;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+  
+
+
+div.menu-bar nav.navigation-menu div.profille span.info-profille{
+  margin-top: 1.2rem;
+  margin-left: 1.2rem;
+}
+
+div.menu-bar nav.navigation-menu div.profille span strong{
+  text-transform: capitalize;
+}
+
+ .menu-bar {
+  top: 6.3rem;
+  position: fixed;
+  width: 99vw;
+  background: #212F3C; 
+  left: -100vw;
+  height: 100vh;
+
+  transition: all 0.2s linear;
+  z-index: 1;
+}
+
+
+/* .fa-arrow-alt-circle-right {
+  display: inline-block;
+   transform: rotate(90deg);  
+}  */
+
+.arrow {
+  display: inline-block;
+  transform: rotate(90deg);
+}
+
+
+.menu-move{
+  left: 0;
+}
+
+div .menu-bar nav > ul {
+  margin-top: 2rem;
+}
+
+
+div .menu-bar nav > ul li a {
+  display: block;
+  position: relative;
+  padding: 12px 5px;
+  width: 100%;
+  color:#E5E7E9;
+  border-radius: 20px;
+  
+  transition: background  0.1s;
+
+}
+
+div .menu-bar nav > ul li a:hover {
+  background: #E5E7E9 ;
+  color:black;
+}
+
+/* menu secundario */
+
+div .menu-bar nav > ul .list-nav-secondary {
+ padding-left: 4rem;
+}
+
+
+
+#check:checked ~ div.menu-bar{
+  transform: translateY(80%);
+}
+
+.hide {
+ display: none;
+}
+
+.arrow {
+
+}
+
+div.body-red {
+  background:rgb(255, 0, 0,0.8);
+}
+
+
+/* conteudo da pagina */
+
+.content {
+   margin-top: 10rem; 
+ position: absolute;
+   max-width: 100vw;
+  position: absolute;  
+  
+}
+.contend-for-right {
+   left: 90%; 
+}
+
+
+
+/*
+    responvidade
+*/
+@media(min-width: 900px){
+  :root {    
+      font-size: 62.5%;
+  }
+
+  #icon{
+    display: none;
+  }
+
+  #bar {
+    width: 300px;
+    left: 0;
+    height:100vh ;
+  
+  }
+
+  .logo {
+    padding: 0.8rem;
+  }
+
+  #content-id{
+    left: 350px;
+   
+  }
+
+
+}
